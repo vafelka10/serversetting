@@ -6,15 +6,12 @@
 
 ## ⚡ Быстрый старт
 
+Обновление системы и установка curl:
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/vafelka10/serversetting/main/setup.sh)
+apt update && apt upgrade -y && apt install curl -y
 ```
 
-Если `curl` не установлен:
-```bash
-apt install curl -y
-```
-Затем запускай скрипт:
+Запуск скрипта:
 ```bash
 bash <(curl -Ls https://raw.githubusercontent.com/vafelka10/serversetting/main/setup.sh)
 ```
