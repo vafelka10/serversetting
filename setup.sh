@@ -41,11 +41,10 @@ fi
 # 3. Смена SSH порта
 # ================================================
 read -p "Введи новый SSH порт (например 2222): " SSH_PORT
-
-sed -i "s/^#Port 22/Port $SSH_PORT/" /etc/ssh/sshd_config
-sed -i "s/^Port 22/Port $SSH_PORT/" /etc/ssh/sshd_config
-
-systemctl restart sshd
+ 
+sed -i "s/^#\?Port [0-9]*/Port $SSH_PORT/" /etc/ssh/sshd_config
+ 
+systemctl restart ssh || systemctl restart sshd
 log "SSH порт изменён на $SSH_PORT"
 warn "Не закрывай текущую сессию! Проверь подключение на новом порту."
 
