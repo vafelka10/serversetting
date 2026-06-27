@@ -10,6 +10,14 @@
 bash <(curl -Ls https://raw.githubusercontent.com/vafelka10/serversetting/main/setup.sh)
 ```
 
+Если `curl` не установлен:
+```bash
+apt install curl -y
+```
+Затем запускай скрипт:
+```bash
+bash <(curl -Ls https://raw.githubusercontent.com/vafelka10/serversetting/main/setup.sh)
+```
 ---
 
 ## 📋 Что делает скрипт
