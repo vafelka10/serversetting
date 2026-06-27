@@ -43,6 +43,7 @@ fi
 read -p "Введи новый SSH порт (например 2222): " SSH_PORT
  
 sed -i "s/^#\?Port [0-9]*/Port $SSH_PORT/" /etc/ssh/sshd_config
+SSH_PORT=${SSH_PORT:-2222}
  
 systemctl restart ssh || systemctl restart sshd
 log "SSH порт изменён на $SSH_PORT"
