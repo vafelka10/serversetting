@@ -56,6 +56,7 @@ log "Настройка firewall..."
 ufw allow $SSH_PORT/tcp
 ufw allow 80/tcp
 ufw allow 443/tcp
+ufw allow 8443/tcp
 ufw --force enable
 log "UFW активирован."
 
